@@ -1,0 +1,25 @@
+study_description,reason_for_exam,protocol_name
+MRI Brain,Chronic nonfocal headaches with normal neurologic examination,MRI Brain WO Contrast
+MRI Brain,New persistent dizziness without focal neurologic deficit,MRI Brain WO Contrast
+MRI Brain,Known glioblastoma after chemoradiation for treatment surveillance,MRI Brain WWO Contrast
+MRI Brain,History of melanoma with new headaches; evaluate for intracranial metastases,MRI Brain WWO Contrast
+MRI Brain,Sudden aphasia and right arm weakness with last known well two hours ago,MRI Brain FAST
+MRI Brain,Acute left facial droop and dense left hemiparesis,MRI Brain FAST
+MRI Brain,Elevated prolactin with concern for pituitary microadenoma,MRI Pituitary
+MRI Brain,Possible ACTH-secreting pituitary lesion in patient with Cushing syndrome,MRI Pituitary
+MRI Brain,Progressive unilateral sensorineural hearing loss on the left,MRI Internal Auditory Canal
+MRI Brain,Asymmetric tinnitus and intermittent vertigo,MRI Internal Auditory Canal
+MRI Brain,Drug-resistant focal seizures with impaired awareness,MRI Brain Epilepsy
+MRI Brain,First unprovoked seizure with recurrent brief deja vu episodes,MRI Brain Epilepsy
+MRI Brain,Optic neuritis with concern for demyelinating disease,MRI Brain MS
+MRI Brain,Transient numbness and prior lesions concerning for multiple sclerosis,MRI Brain MS
+MRI Brain,Progressive memory impairment; evaluate pattern of cerebral volume loss,MRI Brain Dementia
+MRI Brain,Gradually worsening cognitive decline and executive dysfunction,MRI Brain Dementia
+MRI Brain,Electric shock-like right facial pain in the V2 distribution,MRI Trigeminal Neuralgia
+MRI Brain,Recurrent unilateral facial pain triggered by chewing and brushing teeth,MRI Trigeminal Neuralgia
+MRI Brain,Gait instability urinary urgency and ventriculomegaly; assess for normal pressure hydrocephalus,MRI Brain CSF Flow
+MRI Brain,Known hydrocephalus with shunt evaluation and suspected abnormal CSF dynamics,MRI Brain CSF Flow
+MRI Brain,Treated high-grade glioma with new enhancement; distinguish viable tumor from post-treatment effect,MRI Brain With Perfusion
+MRI Brain,New neurologic symptoms after multiple prior tumor resections; assess for recurrent high-grade glioma,MRI Brain With Perfusion
+MRI Brain,Postoperative skull-base symptoms with uncertain prior surgery and implanted device history,Radiologist Review
+MRI Brain,Unclear symptoms after several intracranial operations with uncertain implant compatibility,Radiologist Review

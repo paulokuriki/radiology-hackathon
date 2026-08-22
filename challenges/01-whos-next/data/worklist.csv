@@ -1,0 +1,31 @@
+study_id,snapshot_time,exam_completed_time,modality,exam_description,patient_location,order_priority,clinical_indication
+WL-001,2026-08-22 14:00,2026-08-22 13:48,CT,CT Head Without Contrast,ED,STAT,Acute aphasia and right-sided weakness
+WL-002,2026-08-22 14:00,2026-08-22 13:28,CT,CT Angiography Chest,ED,STAT,Acute chest pain with concern for aortic dissection
+WL-003,2026-08-22 14:00,2026-08-22 11:10,CT,CT Abdomen Pelvis With IV Contrast,Inpatient Floor,Urgent,Fever and worsening abdominal pain after recent bowel surgery
+WL-004,2026-08-22 14:00,2026-08-22 13:50,XR,Portable Chest Radiograph,ICU,STAT,New hypoxemia after central venous line placement
+WL-005,2026-08-22 14:00,2026-08-22 12:36,CT,CT Pulmonary Angiography,ED,Urgent,Tachycardia and hypoxemia with concern for pulmonary embolism
+WL-006,2026-08-22 14:00,2026-08-22 12:55,MR,MRI Brain Without Contrast,ED,STAT,Transient left-sided weakness and dysarthria
+WL-007,2026-08-22 14:00,2026-08-22 12:20,US,Venous Duplex Ultrasound Lower Extremities Bilateral,ED,Urgent,Leg swelling with concern for deep venous thrombosis
+WL-008,2026-08-22 14:00,2026-08-22 09:25,CT,CT Chest With IV Contrast,Inpatient Floor,Routine,Restaging for known metastatic lung cancer
+WL-009,2026-08-22 14:00,2026-08-22 08:30,XR,Chest Radiograph Two Views,Outpatient,Routine,Chronic cough
+WL-010,2026-08-22 14:00,2026-08-22 07:45,MR,MRI Lumbar Spine Without Contrast,Outpatient,Routine,Chronic low back pain with radiculopathy
+WL-011,2026-08-22 14:00,2026-08-22 13:52,CT,CT Head Without Contrast,ED,STAT,Head trauma after motor vehicle collision
+WL-012,2026-08-22 14:00,2026-08-22 10:20,CT,CT Abdomen Pelvis With IV Contrast,ICU,Urgent,Increasing vasopressor requirement with elevated lactate
+WL-013,2026-08-22 14:00,2026-08-22 05:30,XR,Portable Abdominal Radiograph,Inpatient Floor,Routine,Abdominal distention and possible ileus
+WL-014,2026-08-22 14:00,2026-08-22 11:45,US,Ultrasound Abdomen Limited,Inpatient Floor,Urgent,Rising bilirubin and fever
+WL-015,2026-08-22 14:00,2026-08-22 13:57,CT,CT Angiography Head and Neck,ED,STAT,Code stroke with new left facial droop
+WL-016,2026-08-22 14:00,2026-08-22 08:55,CT,Low Dose CT Chest,Outpatient,Routine,Annual lung cancer screening
+WL-017,2026-08-22 14:00,2026-08-22 13:40,XR,Portable Abdominal Radiograph,ICU,Urgent,Confirm feeding tube position before use
+WL-018,2026-08-22 14:00,2026-08-22 06:50,CT,CT Sinuses Without Contrast,Outpatient,Routine,Chronic sinusitis
+WL-019,2026-08-22 14:00,2026-08-22 12:10,MR,MRI Cervical Spine Without Contrast,ED,Urgent,Trauma with persistent bilateral hand paresthesias
+WL-020,2026-08-22 14:00,2026-08-22 13:02,CT,CT Abdomen Pelvis With IV Contrast,ED,Urgent,Right lower quadrant pain with leukocytosis
+WL-021,2026-08-22 14:00,2026-08-22 12:30,CT,CT Head Without Contrast,Inpatient Floor,Urgent,Acute confusion and new unequal pupils
+WL-022,2026-08-22 14:00,2026-08-22 09:30,US,Ultrasound Renal Complete,Inpatient Floor,Routine,Acute kidney injury
+WL-023,2026-08-22 14:00,2026-08-22 13:10,CT,CT Pulmonary Angiography,ED,STAT,Sudden dyspnea and pleuritic chest pain
+WL-024,2026-08-22 14:00,2026-08-22 10:45,XR,Knee Radiographs Four Views,Outpatient,Routine,Chronic knee pain
+WL-025,2026-08-22 14:00,2026-08-22 11:35,MR,MRI Brain With and Without Contrast,Inpatient Floor,Urgent,New seizure in patient with known intracranial neoplasm
+WL-026,2026-08-22 14:00,2026-08-22 09:05,CT,CT Chest Abdomen Pelvis With IV Contrast,Inpatient Floor,Routine,Oncology restaging after chemotherapy
+WL-027,2026-08-22 14:00,2026-08-22 13:44,CT,CT Cervical Spine Without Contrast,ED,STAT,High-energy trauma with midline cervical tenderness
+WL-028,2026-08-22 14:00,2026-08-22 11:55,US,Ultrasound Pelvis Transabdominal and Transvaginal,ED,Urgent,First trimester bleeding with pelvic pain
+WL-029,2026-08-22 14:00,2026-08-22 13:34,XR,Portable Chest Radiograph,ICU,STAT,Increasing oxygen requirement after intubation
+WL-030,2026-08-22 14:00,2026-08-22 12:48,CT,CT Head Without Contrast,ED,STAT,Clinical indication not provided

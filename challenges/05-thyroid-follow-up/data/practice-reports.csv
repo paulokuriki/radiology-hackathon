@@ -1,0 +1,92 @@
+report_text,limited_life_expectancy_or_major_competing_comorbidity,expected_recommendation,expected_ui_state
+"EXAM: CT CHEST WITH IV CONTRAST
+
+CLINICAL HISTORY: 34 year-old female after blunt chest trauma.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 1.0 cm hypoattenuating nodule in the right thyroid lobe. No suspicious lower cervical lymphadenopathy or invasion of adjacent soft tissues in the imaged field. No acute thoracic injury.
+
+IMPRESSION:
+
+1. No acute thoracic injury.
+2. Incidental 1.0 cm right thyroid nodule.",No,Recommend ultrasound follow-up,Recommendation ready
+"EXAM: CT CERVICAL SPINE WITHOUT CONTRAST
+
+CLINICAL HISTORY: 35 year-old male with neck pain after a bicycle collision.
+
+COMPARISON: None available.
+
+FINDINGS:
+No acute fracture. Incidental 1.4 cm left thyroid nodule. No suspicious cervical lymphadenopathy or local invasion.
+
+IMPRESSION:
+
+1. No acute cervical spine fracture.
+2. Incidental 1.4 cm left thyroid nodule.",No,No follow-up imaging recommended,Recommendation ready
+"EXAM: CT CHEST WITH IV CONTRAST
+
+CLINICAL HISTORY: 35 year-old female with fever and shortness of breath.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 1.5 cm nodule in the left thyroid lobe. No suspicious lower cervical lymphadenopathy or invasion of adjacent soft tissues. Left lower lobe airspace opacity is present.
+
+IMPRESSION:
+
+1. Left lower lobe pneumonia.
+2. Incidental 1.5 cm left thyroid nodule.",No,Recommend ultrasound follow-up,Recommendation ready
+"EXAM: CT ANGIOGRAPHY NECK
+
+CLINICAL HISTORY: 68 year-old male with transient visual symptoms.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 0.7 cm right thyroid nodule. A right level IV lymph node measures 1.2 cm and contains punctate calcification. No local soft-tissue invasion.
+
+IMPRESSION:
+
+1. Incidental right thyroid nodule with suspicious right level IV lymph node.
+2. No hemodynamically significant carotid stenosis.",No,Recommend ultrasound follow-up,Recommendation ready
+"EXAM: CT CHEST WITHOUT CONTRAST
+
+CLINICAL HISTORY: 64 year-old patient with advanced metastatic malignancy receiving hospice care.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 2.0 cm left thyroid nodule. No suspicious lower cervical lymphadenopathy or invasion within the imaged field. Multiple pulmonary metastases are present.
+
+IMPRESSION:
+
+1. Multiple pulmonary metastases.
+2. Incidental 2.0 cm left thyroid nodule.",Yes,No follow-up imaging recommended,Recommendation ready
+"EXAM: MRI NECK WITH AND WITHOUT CONTRAST
+
+CLINICAL HISTORY: 49 year-old female with known thyroid nodule and new neck discomfort.
+
+COMPARISON: Prior thyroid ultrasound.
+
+FINDINGS:
+Known 1.7 cm left thyroid nodule. No suspicious cervical lymphadenopathy or invasion of adjacent soft tissues.
+
+IMPRESSION:
+
+1. Known 1.7 cm left thyroid nodule.
+2. No suspicious cervical lymphadenopathy.",No,"Non-incidental thyroid nodule identified; thyroid best practice does not apply",Pathway not applicable
+"EXAM: CT CHEST WITH IV CONTRAST
+
+CLINICAL HISTORY: Chest pain after motor vehicle collision.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 1.4 cm left thyroid nodule. No suspicious lower cervical lymphadenopathy or invasion within the imaged field. No acute thoracic injury.
+
+IMPRESSION:
+
+1. No acute thoracic injury.
+2. Incidental 1.4 cm left thyroid nodule.",No,,Needs review

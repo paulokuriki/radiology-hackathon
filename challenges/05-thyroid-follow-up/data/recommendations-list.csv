@@ -1,0 +1,4 @@
+outcome_id,outcome_type,outcome_text
+THY-001,ACR follow-up recommendation,Recommend ultrasound follow-up
+THY-002,ACR follow-up recommendation,No follow-up imaging recommended
+THY-003,ACR applicability outcome,Non-incidental thyroid nodule identified; thyroid best practice does not apply

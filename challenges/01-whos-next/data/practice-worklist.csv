@@ -1,0 +1,26 @@
+study_id,snapshot_time,exam_completed_time,modality,exam_description,patient_location,order_priority,clinical_indication
+WL-V001,2026-08-29 16:00,2026-08-29 15:49,CT,CT Head Without Contrast,ED,STAT,Sudden word-finding difficulty and left arm drift
+WL-V002,2026-08-29 16:00,2026-08-29 15:55,XR,Portable Chest Radiograph,ICU,STAT,Confirm endotracheal tube position after intubation
+WL-V003,2026-08-29 16:00,2026-08-29 15:26,CT,CT Angiography Chest,ED,STAT,Tearing chest pain radiating to the back
+WL-V004,2026-08-29 16:00,2026-08-29 13:30,MR,MRI Lumbar Spine Without Contrast,ED,STAT,New urinary retention and saddle numbness
+WL-V005,2026-08-29 16:00,2026-08-29 12:20,CT,CT Abdomen Pelvis With IV Contrast,Inpatient Floor,Urgent,Fever and worsening pain after colectomy
+WL-V006,2026-08-29 16:00,2026-08-29 14:35,CT,CT Pulmonary Angiography,ED,Urgent,New oxygen requirement and tachycardia
+WL-V007,2026-08-29 16:00,2026-08-29 14:10,US,Ultrasound Scrotum With Doppler,ED,Urgent,Abrupt onset unilateral testicular pain
+WL-V008,2026-08-29 16:00,2026-08-29 11:50,CT,CT Head Without Contrast,Inpatient Floor,Routine,Abrupt decline in mental status during morning rounds
+WL-V009,2026-08-29 16:00,2026-08-29 10:40,MR,MRI Brain With and Without Contrast,Inpatient Floor,Routine,New generalized seizure in patient with treated brain metastases
+WL-V010,2026-08-29 16:00,2026-08-29 07:25,XR,Portable Abdominal Radiograph,Inpatient Floor,Routine,Increasing abdominal distention and no bowel movement
+WL-V011,2026-08-29 16:00,2026-08-29 09:15,CT,CT Chest With IV Contrast,Inpatient Floor,Routine,Restaging for lymphoma after treatment
+WL-V012,2026-08-29 16:00,2026-08-29 08:45,CT,Low Dose CT Chest,Outpatient,Routine,Annual lung cancer screening
+WL-V013,2026-08-29 16:00,2026-08-29 13:05,US,Ultrasound Abdomen Limited,Inpatient Floor,Urgent,Right upper quadrant pain with fever and jaundice
+WL-V014,2026-08-29 16:00,2026-08-29 15:42,CT,CT Cervical Spine Without Contrast,ED,STAT,Fall with midline neck tenderness and weakness
+WL-V015,2026-08-29 16:00,2026-08-29 15:18,XR,Portable Chest Radiograph,ICU,Urgent,Verify line position before starting vasoactive infusion
+WL-V016,2026-08-29 16:00,2026-08-29 12:48,CT,CT Abdomen Pelvis Without Contrast,ED,Routine,Flank pain and hematuria
+WL-V017,2026-08-29 16:00,2026-08-29 06:50,CT,CT Sinuses Without Contrast,Outpatient,Routine,Chronic recurrent sinusitis
+WL-V018,2026-08-29 16:00,2026-08-29 09:40,MR,MRI Brain With and Without Contrast,Outpatient,Routine,Chronic headaches without focal neurologic symptoms
+WL-V019,2026-08-29 16:00,2026-08-29 12:15,US,Venous Duplex Ultrasound Lower Extremities Bilateral,Inpatient Floor,Urgent,New unilateral leg swelling after orthopedic surgery
+WL-V020,2026-08-29 16:00,2026-08-29 15:07,CT,CT Pulmonary Angiography,ED,STAT,Sudden dyspnea with pleuritic chest pain and syncope
+WL-V021,2026-08-29 16:00,2026-08-29 10:25,XR,Chest Radiograph Two Views,Outpatient,Routine,Chronic cough
+WL-V022,2026-08-29 16:00,2026-08-29 13:18,MR,MRI Cervical Spine Without Contrast,Inpatient Floor,Urgent,Progressive hand weakness and gait instability
+WL-V023,2026-08-29 16:00,2026-08-29 15:35,CT,CT Head Without Contrast,ED,STAT,Clinical indication not provided
+WL-V024,2026-08-29 16:00,2026-08-29 08:20,US,Ultrasound Renal Complete,Inpatient Floor,Routine,Acute kidney injury
+WL-V025,2026-08-29 16:00,2026-08-29 11:30,CT,CT Abdomen Pelvis With IV Contrast,ICU,Urgent,Worsening shock with abdominal tenderness

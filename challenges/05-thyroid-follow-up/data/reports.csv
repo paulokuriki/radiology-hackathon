@@ -1,0 +1,114 @@
+report_text,limited_life_expectancy_or_major_competing_comorbidity,expected_recommendation,expected_ui_state
+"EXAM: CT CHEST WITH IV CONTRAST
+
+CLINICAL HISTORY: 32 year-old male with chest pain after motor vehicle collision.
+
+COMPARISON: None available.
+
+FINDINGS:
+THYROID AND LOWER NECK:
+Incidental 1.8 cm hypoattenuating nodule in the left thyroid lobe. No suspicious lower cervical lymphadenopathy within the imaged field. No invasion of adjacent soft tissues.
+
+LUNGS AND AIRWAYS:
+Mild dependent bibasilar atelectatic change. No focal pulmonary contusion pleural effusion or pneumothorax.
+
+MEDIASTINUM AND HILA:
+No mediastinal hematoma or lymphadenopathy.
+
+HEART AND GREAT VESSELS:
+Heart size is within normal limits. Thoracic aorta is normal in caliber without acute traumatic abnormality.
+
+UPPER ABDOMEN:
+No acute abnormality in the visualized upper abdomen.
+
+BONES AND SOFT TISSUES:
+No acute osseous abnormality.
+
+IMPRESSION:
+
+1. No acute traumatic abnormality in the chest.
+2. Incidental 1.8 cm left thyroid nodule.",No,Recommend ultrasound follow-up,Recommendation ready
+"EXAM: CT CERVICAL SPINE WITHOUT CONTRAST
+
+CLINICAL HISTORY: 30 year-old female with neck pain after a fall.
+
+COMPARISON: None available.
+
+FINDINGS:
+No acute cervical spine fracture. Incidental 0.8 cm hypoattenuating nodule in the right thyroid lobe. No suspicious cervical lymph node or extrathyroidal soft-tissue invasion in the imaged neck.
+
+IMPRESSION:
+
+1. No acute cervical spine fracture.
+2. Incidental 0.8 cm right thyroid nodule.",No,No follow-up imaging recommended,Recommendation ready
+"EXAM: CT CHEST WITH IV CONTRAST
+
+CLINICAL HISTORY: 58 year-old male with fever and cough.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 1.2 cm hypoattenuating nodule in the right thyroid lobe. No suspicious lower cervical lymphadenopathy or local invasion within the imaged field. Patchy right lower lobe airspace opacity is present.
+
+IMPRESSION:
+
+1. Right lower lobe pneumonia.
+2. Incidental 1.2 cm right thyroid nodule.",No,No follow-up imaging recommended,Recommendation ready
+"EXAM: CT ANGIOGRAPHY NECK
+
+CLINICAL HISTORY: 62 year-old female with transient left arm weakness.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 0.9 cm left thyroid nodule. A 1.3 cm left level IV lymph node demonstrates a cystic component. No definite invasion of adjacent soft tissues.
+
+VASCULATURE:
+No large vessel occlusion or hemodynamically significant cervical arterial stenosis.
+
+IMPRESSION:
+
+1. Incidental 0.9 cm left thyroid nodule with adjacent suspicious left level IV lymph node.
+2. No large vessel occlusion.",No,Recommend ultrasound follow-up,Recommendation ready
+"EXAM: CT CHEST WITHOUT CONTRAST
+
+CLINICAL HISTORY: 76 year-old patient with end-stage heart failure receiving comfort-focused care.
+
+COMPARISON: None available.
+
+FINDINGS:
+Incidental 2.1 cm heterogeneous nodule in the left thyroid lobe. No suspicious lower cervical lymphadenopathy or invasion of adjacent soft tissues within the imaged field. Small bilateral pleural effusions and mild pulmonary edema are present.
+
+IMPRESSION:
+
+1. Mild pulmonary edema and small bilateral pleural effusions.
+2. Incidental 2.1 cm left thyroid nodule.",Yes,No follow-up imaging recommended,Recommendation ready
+"EXAM: CT NECK WITH IV CONTRAST
+
+CLINICAL HISTORY: 43 year-old female with palpable left thyroid enlargement and prior outside ultrasound showing a thyroid nodule.
+
+COMPARISON: Outside thyroid ultrasound report.
+
+FINDINGS:
+2.0 cm left thyroid lobe nodule. No suspicious cervical lymphadenopathy. No invasion of adjacent soft tissues.
+
+IMPRESSION:
+
+1. 2.0 cm left thyroid nodule corresponding to the clinically known thyroid finding.
+2. No suspicious cervical lymphadenopathy.",No,"Non-incidental thyroid nodule identified; thyroid best practice does not apply",Pathway not applicable
+"EXAM: CT CHEST WITH IV CONTRAST
+
+CLINICAL HISTORY: 45 year-old male after motor vehicle collision.
+
+COMPARISON: None available.
+
+FINDINGS:
+The thyroid gland is partially obscured by streak artifact. There is a possible small hypoattenuating left thyroid nodule but its size cannot be measured reliably. No suspicious lower cervical lymphadenopathy or invasion of adjacent soft tissues within the imaged field.
+
+LUNGS AND AIRWAYS:
+No focal pulmonary contusion pleural effusion or pneumothorax.
+
+IMPRESSION:
+
+1. No acute traumatic abnormality in the chest.
+2. Possible left thyroid nodule incompletely characterized due to streak artifact.",No,,Needs review

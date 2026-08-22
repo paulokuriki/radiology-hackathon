@@ -1,0 +1,13 @@
+protocol_name,clinical_description
+MRI Brain WO Contrast,Routine nonfocal neurologic symptoms such as chronic headache or dizziness without a focal deficit
+MRI Brain WWO Contrast,Known or suspected intracranial tumor metastasis or other enhancing brain lesion
+MRI Brain FAST,Hyperacute focal neurologic deficit requiring an acute stroke MRI pathway
+MRI Pituitary,Known or suspected pituitary or sellar lesion with endocrine symptoms
+MRI Internal Auditory Canal,Asymmetric sensorineural hearing loss tinnitus or vertigo requiring IAC assessment
+MRI Brain Epilepsy,Seizure focus localization or evaluation of recurrent focal seizures
+MRI Brain MS,Known or suspected multiple sclerosis or demyelinating disease
+MRI Brain Dementia,Cognitive decline or memory loss requiring a neurodegenerative-pattern assessment
+MRI Trigeminal Neuralgia,Paroxysmal facial pain in a trigeminal nerve distribution
+MRI Brain CSF Flow,Hydrocephalus or suspected abnormal cerebrospinal-fluid dynamics
+MRI Brain With Perfusion,Treated or suspected high-grade glioma when perfusion assessment may distinguish tumor progression from treatment effect
+Radiologist Review,Complex postoperative history uncertain implant compatibility or another request that cannot safely fit the simplified catalog
