@@ -31,7 +31,7 @@ hidden-test/  # organizer-only and Git ignored
 ## Final-Demo Input Contract
 
 - An organizer supplies a new file using the documented hidden-test schema. Apps must not depend on a filename, fixed row count, IDs, or preloaded cases.
-- Challenges 01–04 require CSV upload. Challenges 05–06 may use CSV upload, report-text paste, or both.
+- Challenges 01–04 and 06 require CSV upload. Challenge 05 may use CSV upload, report-text paste, or both.
 - Participant-visible reference columns are comparison aids only and must not be required to load hidden input.
 
 ## Dataset Design Principles
@@ -138,27 +138,20 @@ Purpose: help a radiologist create a concise, source-faithful draft impression f
 The `data/reports.csv` required columns are:
 
 ```text
-report_id,source_report_text,reference_impression
+report_id,source_report_text,suggested_impression
 ```
 
 - `source_report_text` includes complete synthetic report content through Findings, without an Impression section.
-- `reference_impression` is a participant-visible reference for comparing drafts and must never be given to the model as input.
+- `suggested_impression` is a participant-visible comparison example and must never be given to the model as input.
 - Source reports should be long and internally coherent, with acute, chronic, stable, incidental, and progressive findings that require prioritization.
 - The expected output is no more than three numbered items. It must not invent facts, recommendations, or certainty that is absent from the source text.
-- Hidden-test reports omit `reference_impression` and use the same source-report format.
+- The prototype must let the user edit the prompt, apply it to an uploaded CSV, review generated drafts, and export the uploaded rows with a `generated_impression` column added. The review must make `suggested_impression` available when that column is present, without requiring it.
+- Hidden-test reports use only `report_id,source_report_text`; the same CSV workflow must work without `suggested_impression`.
 - `data/reports.csv` contains ten source reports; `hidden-test/reports.csv` contains three source-only reports.
 
 ## Challenge Brief Style
 
-Each `challenges/<number>-<slug>/<slug>-instructions.md` file should include:
-
-1. `The Problem`
-2. `Your Challenge`
-3. `The Data`, including provided and hidden-test stages
-4. `Success`
-5. `Final Demo`
-
-Write in plain language for mixed technical backgrounds. Specify the user goal and data contract, but leave interface and implementation decisions open. The final product must be an interactive prototype; a notebook, terminal output, prompt transcript, or slide deck alone is insufficient.
+Each `challenges/<number>-<slug>/<slug>-instructions.md` file should cover the task, data contract, minimum requirements, success criteria, and final demo. Write in plain language for mixed technical backgrounds. Specify the user goal and data contract, but leave interface and implementation decisions open. The final product must be an interactive prototype; a notebook, terminal output, prompt transcript, or slide deck alone is insufficient.
 
 ## Organizer Evaluation Support
 

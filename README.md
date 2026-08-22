@@ -32,8 +32,8 @@ Each team will have 3 minutes to present the problem, the product working on an 
 
 Organizers will supply new dataset, using the same schema documented in the challenge instructions. Your tool must load it, process and show the results.
 
-- Challenges 1–4: provide a CSV-upload workflow.
-- Challenges 5–6: provide CSV upload, individual-report paste, or both.
+- Challenges 1–4 and 6: provide a CSV-upload workflow.
+- Challenge 5: provide CSV upload, individual-report paste, or both.
 - Some provided files include reference columns for learning and self-testing. Hidden inputs omit them; your app cannot require them.
 
 The unseen data tests whether the workflow transfers to another example of the same problem—not whether a team guessed a secret answer.

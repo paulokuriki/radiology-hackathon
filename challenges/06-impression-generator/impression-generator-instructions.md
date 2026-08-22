@@ -1,65 +1,50 @@
 # Challenge 6 — Impression Generator
 
-## The Problem
+## The task
 
-Writing an impression means turning a long, detailed Findings section into a short, clinically useful conclusion. The impression must prioritize urgent findings, preserve important qualifiers and uncertainty, and stay faithful to the source report. A fluent but unsupported statement is not useful.
+Build a small webpage that drafts an impression from a radiology report.
 
-## Your Challenge
+## Minimum requirements
 
-Build a **web-based impression-drafting assistant**. A user should be able to paste or load a source report that has no Impression section and receive an editable draft impression.
+Your tool must:
 
-Your tool should:
+- Let the user upload a CSV containing `report_id` and `source_report_text`. It may also contain `suggested_impression`.
+- Let the user write and edit the prompt used to generate impressions.
+- Generate an impression for each report in the uploaded CSV.
+- Let the user review the generated impressions. When `suggested_impression` is present, make it available for comparison.
+- Create an output CSV that preserves the uploaded rows and adds a `generated_impression` column.
 
-- use the source report as its only clinical evidence
-- produce a concise, prioritized impression
-- preserve laterality, measurements, comparison language, and uncertainty when they matter
-- make urgent or actionable findings easy to recognize
-- let the user edit the draft before use
-- show the source text supporting each impression item, if your design permits
+You decide the interface and workflow. Do not depend on a particular filename, known report IDs, or a fixed row count.
 
-This is intentionally a prompt-engineering challenge. You may use a carefully designed prompt, structured intermediate extraction, rules, an LLM, or a combination. The goal is a useful review workflow, not a claim that the output is ready to sign without radiologist review.
+Do not send the `suggested_impression` to the model. It is for your team's review, not for the model to copy.
 
-## The Data
+## Data
 
-The `data/reports.csv` file contains:
+`data/reports.csv` contains ten synthetic reports with these columns:
+
+- `report_id`
+- `source_report_text` — complete report through Findings; there is deliberately no Impression section
+- `suggested_impression` — an example for comparison
+
+The suggested impression is not a single required answer. Use it to ask: *Did our prompt prioritize the right information and stay faithful to the source?*
+
+## Final demo
+
+An organizer will provide a new CSV with these columns:
 
 - `report_id`
 - `source_report_text`
-- `reference_impression`
 
-The file contains ten complete synthetic reports through Findings, but deliberately omits an Impression section. The reports are long and contain a mix of acute, chronic, incidental, stable, and progressive findings. `reference_impression` is a provided reference for comparing drafts; do not send it to the model as input.
+It will not include `suggested_impression`. Upload and process it, then show the generated impressions and output CSV.
 
-The organizer-held hidden test will use the same two input columns except that it will not include a reference impression.
+Explain one thing that worked, failed, or surprised you.
 
-## Final-Demo Input
+## If you finish early
 
-Your application must let an organizer either upload a hidden-test CSV or paste an individual `source_report_text`. Do not require `reference_impression`, a particular filename, known report IDs, or a fixed number of rows.
-
-## Output Expectations
-
-Ask the system to draft no more than **three numbered impression items**. A strong draft should:
-
-- place time-sensitive findings first
-- combine related findings when that improves clarity
-- include relevant negative qualifiers, such as no right-heart strain or no hydrocephalus
-- avoid promoting every incidental or stable detail into the impression
-- never invent a diagnosis, recommendation, measurement, laterality, comparison, or degree of certainty
-
-The reference impression is not the only acceptable wording. The meaningful test is whether a radiologist can see a concise, faithful, editable summary and understand why each item is there.
+Consider improvements such as saved prompt versions, source-evidence highlighting, or a summary across all reports.
 
 ## Success
 
-A radiologist should be able to load a long report, quickly review the proposed impression, inspect its supporting evidence, and efficiently correct it when needed.
+A successful prototype lets a radiologist test a prompt on a report collection, compare drafts with provided examples, improve the prompt, and apply the same workflow to new data.
 
-Focus on the **smallest useful version** you can build.
-
-## Final Demo
-
-Show us:
-
-1. The prompt or workflow you designed
-2. How a user loads a source report and reviews the draft
-3. How the tool performs on a hidden report
-4. What worked, failed, or surprised you
-
-**No slides. Show the product.**
+**No slides. Show the experiment working.**
