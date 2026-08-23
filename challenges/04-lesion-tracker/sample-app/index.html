@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Lesion Tracker</title><link rel="stylesheet" href="styles.css" /></head>
+  <body>
+    <main>
+      <header><div><p class="eyebrow">Serial CT chest review</p><h1>Lesion Tracker</h1><p>Separate the important findings, then inspect their longitudinal evidence.</p></div><label for="history-upload">Upload patient-history CSV</label><input id="history-upload" type="file" accept=".csv,text/csv" /></header>
+      <section class="status"><strong id="history-name">Loading bundled history…</strong><span>“Not mentioned” is kept distinct from “resolved.”</span></section>
+      <section class="workspace"><aside><p class="eyebrow">Tracked findings</p><div id="track-list"></div></aside><section class="detail"><div id="empty" class="empty" hidden>Upload a CSV with <code>study_date</code> and <code>report_text</code>.</div><div id="detail-content"><div class="detail-head"><div><p class="eyebrow">Longitudinal evidence</p><h2 id="track-title">Choose a finding</h2></div><span id="track-count"></span></div><div id="timeline" class="timeline"></div><section class="source"><div><p class="eyebrow">Source report</p><strong id="source-date">—</strong></div><article id="source-text"></article></section></div></section></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

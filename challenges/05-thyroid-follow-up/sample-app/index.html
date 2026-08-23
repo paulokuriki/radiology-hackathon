@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Thyroid Follow-Up</title><link rel="stylesheet" href="styles.css" /></head>
+  <body>
+    <main>
+      <header><div><p class="eyebrow">Incidental finding assistant</p><h1>Thyroid Follow-Up</h1><p>Confirm the facts, then make the simplified pathway visible.</p></div><label for="reports-upload">Upload reports CSV</label><input id="reports-upload" type="file" accept=".csv,text/csv" /></header>
+      <section class="notice"><strong>Candidate facts are editable.</strong><span>Uncertain inputs lead to Needs review rather than a guess.</span></section>
+      <section class="workspace"><aside><p class="eyebrow">Reports</p><div id="report-list"></div></aside><section class="review"><div class="review-head"><div><p class="eyebrow">Confirm decision inputs</p><h2 id="report-label">Loading sample reports…</h2></div><span id="state-chip"></span></div><div class="columns"><section><div class="fields"><label>Modality<select id="modality"><option>Uncertain</option><option>CT</option><option>MRI</option></select></label><label>Incidental nodule?<select id="incidental"><option>Uncertain</option><option>Yes</option><option>No</option></select></label><label>Patient age<input id="age" type="number" min="0" placeholder="Unknown" /></label><label>Largest nodule (cm)<input id="size" type="number" min="0" step="0.1" placeholder="Unknown" /></label><label>Suspicious feature?<select id="suspicious"><option>Uncertain</option><option>Yes</option><option>No</option></select></label><label>Major comorbidity / limited life expectancy?<select id="comorbidity"><option>Uncertain</option><option>Yes</option><option>No</option></select></label></div><section class="result"><p class="eyebrow">Editable draft outcome</p><textarea id="recommendation" rows="3"></textarea><p id="reasoning"></p></section></section><section class="source"><div><p class="eyebrow">Report evidence</p><span id="evidence"></span></div><article id="report-text"></article></section></div></section></section>
+    </main><script src="app.js"></script>
+  </body>
+</html>

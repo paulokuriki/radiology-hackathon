@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protocol Path</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div><p class="eyebrow">MRI brain local routing</p><h1>Protocol Path</h1><p class="lede">A transparent starting point for selecting the local MRI brain protocol.</p></div>
+        <label class="button" for="orders-upload">Upload new orders CSV</label><input id="orders-upload" type="file" accept=".csv,text/csv" />
+      </header>
+      <section class="intro"><strong id="summary">Loading local protocol catalog…</strong><span>Suggested routes are editable. Unclear requests go to Radiologist Review.</span></section>
+      <div class="layout">
+        <aside><p class="eyebrow">Local catalog</p><div id="catalog"></div></aside>
+        <section class="workspace">
+          <div class="workspace-head"><div><p class="eyebrow">Orders to route</p><h2>Recommendations</h2></div><span id="file-name">Bundled examples</span></div>
+          <div id="orders" class="orders"></div>
+          <div id="empty" class="empty" hidden>Upload a CSV with <code>study_description</code> and <code>reason_for_exam</code>.</div>
+        </section>
+      </div>
+    </main>
+    <template id="order-template">
+      <article class="order-card">
+        <div class="order-top"><span class="order-number"></span><span class="confidence"></span></div>
+        <p class="reason"></p>
+        <label>Suggested local route<select class="route-select"></select></label>
+        <p class="evidence"></p><p class="reference"></p>
+      </article>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
