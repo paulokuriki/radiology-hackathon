@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's Next? | Worklist Prioritizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Radiology worklist decision support</p>
+          <h1>Who’s Next?</h1>
+          <p class="subhead">A transparent starting point for deciding what to read now.</p>
+        </div>
+        <label class="upload-button" for="file-input">Upload worklist CSV</label>
+        <input id="file-input" type="file" accept=".csv,text/csv" />
+      </header>
+
+      <section id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">↑</div>
+        <h2>Start with a worklist snapshot</h2>
+        <p>Upload a CSV with the eight challenge columns. The file stays in this browser.</p>
+        <label class="primary-button" for="file-input">Choose a CSV</label>
+        <p class="hint">For the sprint demo, upload <code>../data/worklist.csv</code> or a new organizer file.</p>
+      </section>
+
+      <section id="workspace" hidden>
+        <div class="summary-row" aria-live="polite">
+          <div class="summary-item"><span id="study-count">0</span> studies waiting</div>
+          <div class="summary-item"><span id="now-count">0</span> read now</div>
+          <div class="summary-item">Snapshot <span id="snapshot-time">—</span></div>
+          <button id="reset-overrides" class="text-button">Reset manual order</button>
+        </div>
+
+        <section class="controls" aria-label="Prioritization controls">
+          <div class="control-heading">
+            <div>
+              <p class="eyebrow">Make the policy visible</p>
+              <h2>Prioritization rules</h2>
+            </div>
+            <button id="restore-defaults" class="text-button">Restore defaults</button>
+          </div>
+          <p class="control-copy">Scores combine the inputs below. These are prompts for review, not a clinical mandate.</p>
+          <div class="sliders">
+            <label>Order priority <output id="priority-value">45</output>
+              <input id="priority-weight" type="range" min="0" max="100" value="45" />
+            </label>
+            <label>Patient location <output id="location-value">25</output>
+              <input id="location-weight" type="range" min="0" max="100" value="25" />
+            </label>
+            <label>Waiting time <output id="wait-value">20</output>
+              <input id="wait-weight" type="range" min="0" max="100" value="20" />
+            </label>
+            <label>Clinical indication <output id="indication-value">10</output>
+              <input id="indication-weight" type="range" min="0" max="100" value="10" />
+            </label>
+          </div>
+          <p class="policy-note">Signal rules: STAT, ED/ICU, long waits, and acute key phrases raise the suggested order. Missing indications are flagged for review rather than assumed low risk.</p>
+        </section>
+
+        <section class="worklist-section">
+          <div class="table-toolbar">
+            <div>
+              <p class="eyebrow">Suggested sequence</p>
+              <h2>Worklist</h2>
+            </div>
+            <div class="filters">
+              <label class="visually-hidden" for="location-filter">Filter location</label>
+              <select id="location-filter"><option value="">All locations</option></select>
+              <label class="visually-hidden" for="priority-filter">Filter order priority</label>
+              <select id="priority-filter"><option value="">All order priorities</option></select>
+              <label class="visually-hidden" for="search">Search worklist</label>
+              <input id="search" type="search" placeholder="Search exam or indication" />
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Suggested order</th><th>Study</th><th>Patient context</th><th>Waiting</th><th>Why it surfaced</th><th>Action</th></tr></thead>
+              <tbody id="worklist-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <template id="row-template">
+      <tr>
+        <td class="rank"></td>
+        <td><span class="tier"></span><span class="score"></span></td>
+        <td class="study"></td>
+        <td class="context"></td>
+        <td class="waiting"></td>
+        <td class="reasons"></td>
+        <td class="actions"><button class="move-up" title="Move up">↑</button><button class="move-down" title="Move down">↓</button></td>
+      </tr>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>

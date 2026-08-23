@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Look | Report review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Second Look home">
+          <span class="brand-mark">S</span>
+          <span>Second <em>Look</em></span>
+        </a>
+        <div class="topbar-actions">
+          <label class="upload-button" for="csv-upload">
+            <span aria-hidden="true">↑</span> Upload reports CSV
+          </label>
+          <input id="csv-upload" type="file" accept=".csv,text/csv" />
+          <button id="load-sample" class="quiet-button">Load sample set</button>
+        </div>
+      </header>
+
+      <section class="intro">
+        <div>
+          <p class="eyebrow">Pre-sign review</p>
+          <h1>A quieter final check.</h1>
+          <p class="lede">Surface possible tensions between findings and impression, with the text that prompted each check.</p>
+        </div>
+        <div class="status-card" aria-live="polite">
+          <span class="status-dot"></span>
+          <div><strong id="dataset-name">Sample dataset</strong><span id="dataset-detail">20 reports ready to review</span></div>
+        </div>
+      </section>
+
+      <section class="ai-bar" aria-label="Optional AI review">
+        <div>
+          <span class="eyebrow">Optional AI review</span>
+          <p>Use an available OpenRouter model to generate evidence-backed review cues for the open report.</p>
+        </div>
+        <div class="ai-controls">
+          <input id="api-key" type="password" autocomplete="off" placeholder="OpenRouter API key (this session only)" aria-label="OpenRouter API key" />
+          <button id="load-models" class="quiet-button">Find models</button>
+          <select id="model-select" aria-label="Available model" disabled><option>Choose a model</option></select>
+          <button id="ai-review" class="ai-button" disabled>Review with AI</button>
+          <button id="ai-review-all" class="quiet-button" disabled>Review all with AI</button>
+        </div>
+        <p id="ai-status" class="ai-status">Rules-only review is ready.</p>
+      </section>
+
+      <section class="workspace">
+        <aside class="report-rail" aria-label="Report list">
+          <div class="rail-head">
+            <div><span class="eyebrow">Worklist</span><strong id="report-count">20 reports</strong></div>
+            <button id="flag-filter" class="filter-button" aria-pressed="false">Review items <span id="flagged-count">0</span></button>
+          </div>
+          <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find report ID or text" /></label>
+          <div id="report-list" class="report-list"></div>
+        </aside>
+
+        <section class="review-pane" aria-label="Report review">
+          <div id="empty-state" class="empty-state" hidden>
+            <div class="empty-icon">↗</div>
+            <h2>No matching reports</h2>
+            <p>Try a different search or show all reports.</p>
+          </div>
+          <div id="review-content">
+            <div class="review-head">
+              <div><p class="eyebrow" id="exam-type">Report</p><h2 id="active-id">—</h2></div>
+              <div class="review-actions"><button id="mark-reviewed" class="reviewed-button">Mark reviewed</button><span id="review-state" class="review-state"></span></div>
+            </div>
+            <div id="summary-banner" class="summary-banner"></div>
+            <div class="review-grid">
+              <section class="report-card">
+                <div class="card-title"><span class="eyebrow">Source report</span><button id="toggle-highlight" class="text-button" aria-pressed="true">Highlights on</button></div>
+                <article id="report-text" class="report-text"></article>
+              </section>
+              <aside class="findings-card">
+                <div class="card-title"><div><span class="eyebrow">Second-look checks</span><h3 id="check-title">Review cues</h3></div><span id="check-count" class="count-badge">0</span></div>
+                <p class="check-intro">These are prompts for inspection, not determinations of error.</p>
+                <div id="checks" class="checks"></div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="check-template">
+      <article class="check">
+        <div class="check-icon">!</div>
+        <div><h4></h4><p class="check-description"></p><div class="evidence"></div></div>
+      </article>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
