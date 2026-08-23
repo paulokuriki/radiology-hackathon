@@ -122,3 +122,15 @@ function parseCsv(text) {
   const headers = lines[0].map((header) => header.trim().replace(/^\uFEFF/, ""));
   return lines.slice(1).map((values, index) => { if (values.length !== headers.length) throw new Error(`CSV row ${index + 2} has ${values.length} values; expected ${headers.length}.`); return Object.fromEntries(headers.map((header, i) => [header, values[i].trim()])); });
 }
+
+async function loadSampleWorklist() {
+  try {
+    const response = await fetch("../data/worklist.csv");
+    if (!response.ok) throw new Error("Sample worklist could not be loaded.");
+    loadStudies(parseCsv(await response.text()));
+  } catch {
+    // The upload workflow remains available when the app is opened directly from a local file.
+  }
+}
+
+loadSampleWorklist();
