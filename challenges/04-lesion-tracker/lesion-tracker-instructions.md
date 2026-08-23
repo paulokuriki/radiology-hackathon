@@ -21,6 +21,18 @@ You decide what information is most useful and how it should be presented.
 
 There is no required layout or implementation.
 
+## Minimum Interactive Workflow
+
+1. Upload one patient-history CSV and validate the `study_date` and `report_text` columns.
+2. Keep separately described findings separate; do not collapse distinct nodules, nodes, or incidental findings into one history.
+3. Let the user select a finding and see dated report evidence for its course over time.
+4. For each relevant study, show a transparent status such as `new`, `increased`, `stable`, `decreased`, `resolved`, or `not mentioned`.
+5. Treat `not mentioned` as unknown, not as proof that a finding resolved, and let the user inspect the source report before accepting the interpretation.
+
+### Straight Starting Point
+
+A static HTML, CSS, and JavaScript page is sufficient. Start with a small set of recognizable finding types in the supplied CT chest histories, such as pulmonary nodules, lymph nodes, and incidental upper-abdominal findings. Use location words, measurements, and trend terms to build separate timeline cards with source excerpts. A general-purpose extraction model is optional, not required.
+
 ## The Data
 
 Each file represents the CT chest history of **one synthetic patient**.
@@ -44,7 +56,7 @@ The test data will follow the same structure and general patterns as the provide
 
 ## Final-Demo Input
 
-Your application must let an organizer upload a new patient-history CSV with `study_date` and `report_text` columns. Do not rely on a patient filename, known study dates, a fixed number of studies, or a preloaded patient history.
+Your application must let an organizer upload a new patient-history CSV with `study_date` and `report_text` columns. Validate the input columns. Do not rely on a patient filename, known study dates, a fixed number of studies, or a preloaded patient history.
 
 ## Success
 

@@ -23,7 +23,7 @@ Each team receives one challenge and its participant-facing `data/` folder. Open
 
 1. **Understand (15–25 min):** explore the data and define the user and decision your tool will support.
 2. **Plan (25–32 min):** choose the smallest useful feature set. A good framing is: *“We are building a tool that helps ___ do ___ by ___.”*
-3. **Build (32–60 min):** make the core workflow interactive. Creating a dynamic webpage is recommended.
+3. **Build (32–60 min):** make the core workflow interactive. A self-contained HTML, CSS, and JavaScript webpage is the recommended and fully sufficient path; no Python, virtual environment, package installation, backend, or build step is needed.
 4. **Test and demo (60–90 min):** test on provided examples, refine the experience, then run your tool on new organizer-supplied input.
 
 Each team will have 3 minutes to present the problem, the product working on an unseen test set, and one lesson learned.
@@ -35,6 +35,12 @@ Organizers will supply new dataset, using the same schema documented in the chal
 - Challenges 1–4 and 6: provide a CSV-upload workflow.
 - Challenge 5: provide CSV upload, individual-report paste, or both.
 - Some provided files include reference columns for learning and self-testing. Hidden inputs omit them; your app cannot require them.
+
+## Recommended browser-first build path
+
+Use a browser file-upload control to load the supplied CSV locally, validate the documented columns, and show a helpful error for invalid input. Build the smallest useful workflow: load input, show a transparent suggestion or review cue, link it to source evidence, and let the radiologist edit, override, dismiss, or defer it.
+
+LLMs and external APIs are optional enhancements, not a requirement. If you use one, let the user provide a key for the current session and do not hard-code or persist it. A rule-based or form-driven version is a valid prototype when it supports the workflow well.
 
 The unseen data tests whether the workflow transfers to another example of the same problem—not whether a team guessed a secret answer.
 

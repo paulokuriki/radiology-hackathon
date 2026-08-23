@@ -18,6 +18,18 @@ Your tool should:
 
 The tool should support the user's judgment. It should not present a recommendation as an unquestionable clinical decision.
 
+## Minimum Interactive Workflow
+
+1. Paste one report or upload a CSV, then validate the documented input columns when a file is used.
+2. Show candidate values extracted from the report beside supporting text when it is available; clearly distinguish form inputs that are not reliably present in the report.
+3. Let the user edit every decision input, including the life-expectancy/comorbidity value.
+4. Apply the workshop decision tree only after the user confirms the inputs.
+5. Show an editable recommendation using the exact applicable text in `recommendations-list.csv`, the non-applicable outcome, or **Needs review**.
+
+### Straight Starting Point
+
+A static HTML, CSS, and JavaScript page is sufficient. Use simple text matching to prefill the form when possible, but make the form itself the reliable path. A deterministic JavaScript function can implement the decision tree after confirmation; an LLM is optional and should only suggest candidate facts, never bypass the confirmation step.
+
 ## The Data
 
 `reports.csv` and `practice-reports.csv` contain one complete synthetic report in `report_text`, a `limited_life_expectancy_or_major_competing_comorbidity` form-input value, an `expected_recommendation` reference column, and an `expected_ui_state`. The reports are designed to be pasted into or loaded by the application. The reference columns are for learning and comparison; they should not be provided to the model as input.
@@ -42,7 +54,7 @@ The user must be able to confirm or correct every extracted value and choose:
 
 - `limited_life_expectancy_or_major_competing_comorbidity` — yes, no, or uncertain
 
-If any field required by the decision tree is uncertain, the app should show **Needs review** rather than guess.
+If any field required by the decision tree is uncertain, the app should show **Needs review** rather than guess. The user may still correct the form and rerun the transparent decision path.
 
 ## Expected Decision Tree
 
@@ -98,7 +110,7 @@ If the report or form does not supply a necessary input, the application should 
 
 ## Final-Demo Input
 
-Your application must let an organizer either upload a hidden-test CSV or paste an individual hidden `report_text`. The hidden file does not include `expected_recommendation` or `expected_ui_state`; those columns must not be required for loading. The user must still be able to review extracted facts and change the comorbidity/life-expectancy value before seeing an editable result.
+Your application must let an organizer either upload a hidden-test CSV or paste an individual hidden `report_text`. Validate the required hidden-test columns when a file is uploaded. The hidden file does not include `expected_recommendation` or `expected_ui_state`; those columns must not be required for loading. The user must still be able to review extracted facts and change the comorbidity/life-expectancy value before seeing an editable result.
 
 Reference: [ACR incidental thyroid nodule use case](https://www.acr.org/Data-Science-and-Informatics/AI-in-Your-Practice/AI-Use-Cases/Decreasing-Variability-Follow-Up-Recommendations-Incidental-Thyroid-Nodules) and [ACR Incidental Thyroid Findings Committee white paper](https://www.acr.org/-/media/ACR/NOINDEX/RSCAN/Incidental-Thyroid-Nodule-Follow-up.pdf).
 

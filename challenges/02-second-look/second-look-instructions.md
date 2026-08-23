@@ -18,6 +18,18 @@ Your tool should:
 
 You decide what is worth checking and how the user should see it. There is no required algorithm, alert threshold, or single correct set of findings.
 
+## Minimum Interactive Workflow
+
+1. Upload a report CSV and validate the `report_id` and `report_text` columns.
+2. Let the user open one report at a time and inspect the complete source text.
+3. Surface at least two kinds of review cue from this set: laterality difference, measurement difference, trend tension, and finding-versus-Impression tension.
+4. For every cue, show the text that prompted it and phrase it as a neutral prompt for verification.
+5. Let the user filter to reports with cues and mark a report reviewed for the current session.
+
+### Straight Starting Point
+
+A single client-side web page using HTML, CSS, and JavaScript is sufficient for this challenge. Split the report into `FINDINGS` and `IMPRESSION`, compare simple laterality words and measurements, and look for conflicting trend or conclusion language. An LLM prompt-based review is optional; when used, the user can enter an API key for the current session.
+
 ## The Data
 
 Each row represents one synthetic radiology report. The dataset contains:
@@ -33,13 +45,17 @@ Some reports contain statements that merit review. Others are complex but intern
 
 Use the provided reports to understand the kinds of language and relationships your tool needs to handle and to build the first version of the product.
 
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
+
 ### Hidden Test
 
 During the final demonstration, your application will receive reports that your team has not seen before. The hidden-test data will follow the same schema and general patterns as the provided data.
 
 ## Final-Demo Input
 
-Your application must let an organizer upload a new reports CSV with `report_id` and `report_text` columns. 
+Your application must let an organizer upload a new reports CSV with `report_id` and `report_text` columns. It must not rely on a filename, fixed row count, known report IDs, or a preloaded dataset.
 
 ## Success
 

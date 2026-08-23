@@ -18,6 +18,18 @@ Your tool should:
 
 You may use rules, retrieval, an LLM, or a combination. Protocol names are simplified synthetic local workflow names, not universal clinical guidance.
 
+## Minimum Interactive Workflow
+
+1. Load the local protocol catalog and annotated examples before classifying new orders.
+2. Upload a CSV and validate the `study_description` and `reason_for_exam` columns.
+3. Return one exact `protocol_name` from `protocols.csv` for every order, or return `Radiologist Review` when the request has no clear or safe match.
+4. Show the clinical phrases, catalog description, or similar annotated examples that supported the recommendation.
+5. Let the user change the recommendation from the local protocol catalog.
+
+### Straight Starting Point
+
+A static HTML, CSS, and JavaScript page is sufficient. Build a small phrase bank for each protocol from `protocols.csv` and the annotated examples, score the phrases against `reason_for_exam`, and select the strongest match. If no score is meaningful or two routes conflict, use `Radiologist Review` rather than guessing. This is a local workshop convention, not universal clinical guidance.
+
 ## The Data
 
 Every order has `study_description` equal to `MRI Brain`. The clinical reason distinguishes the protocol.
@@ -52,7 +64,7 @@ Its expected output is always one exact `protocol_name` from `protocols.csv`.
 
 ## Final-Demo Input
 
-Your application must let an organizer upload a new hidden-test CSV. Do not require a particular filename, row count, preloaded order IDs, or an `expected_protocol` column. Load or preserve the local protocol catalog before classifying the uploaded rows.
+Your application must let an organizer upload a new hidden-test CSV. Do not require a particular filename, row count, preloaded order IDs, or an `expected_protocol` column. Validate the documented input columns and load or preserve the local protocol catalog before classifying the uploaded rows.
 
 ## Success
 

@@ -20,6 +20,17 @@ Your tool should:
 
 You decide which signals matter and how they should be combined. There is no required layout, algorithm, or single correct ranking.
 
+## Minimum Interactive Workflow
+
+1. Upload a worklist CSV and validate the eight documented columns.
+2. Show a suggested reading sequence using at least order priority, patient location, waiting time, and clinical indication.
+3. Show the factors that raised each study, including a review cue when the indication is missing or unclear.
+4. Let the user change the visible policy and manually move a study in the sequence.
+
+### Straight Starting Point
+
+A static HTML, CSS, and JavaScript page is sufficient. A useful first version assigns visible points to order priority and location, converts waiting time to a score, checks a short list of urgency phrases in the indication, and combines those signals into a suggested tier. The scores are decision support, not a clinical mandate.
+
 ## The Data
 
 Each dataset is a snapshot of completed synthetic examinations waiting to be read. Each row contains:
@@ -47,7 +58,7 @@ During the final demonstration, your application will receive a new worklist sna
 
 ## Final-Demo Input
 
-Your application must let an organizer upload a new worklist CSV with the documented columns. 
+Your application must let an organizer upload a new worklist CSV with the documented columns. It must not rely on a filename, fixed row count, known study IDs, or a preloaded dataset.
 
 ## Success
 

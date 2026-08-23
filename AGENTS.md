@@ -34,6 +34,14 @@ hidden-test/  # organizer-only and Git ignored
 - Challenges 01–04 and 06 require CSV upload. Challenge 05 may use CSV upload, report-text paste, or both.
 - Participant-visible reference columns are comparison aids only and must not be required to load hidden input.
 
+## Browser-First Build Path
+
+- Every challenge can be completed as a self-contained client-side webpage using HTML, CSS, and JavaScript. This is the recommended workshop path.
+- Teams should not need Python, a virtual environment, package installation, a backend, or a build step to complete the core workflow.
+- Use the browser file-upload control to load CSV data locally. Validate required columns and give a clear message when input is invalid.
+- External APIs and LLMs are optional enhancements, never a prerequisite for loading, reviewing, or editing a result. If an app uses an API key, the user supplies it for the current session; do not hard-code or persist it.
+- A prototype may use another stack, but evaluation should focus on the workflow, source-grounded reasoning, new-input handling, and user control rather than the technology used.
+
 ## Dataset Design Principles
 
 - All data is synthetic. Never add real patient information or identifiers.
