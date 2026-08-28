@@ -114,6 +114,10 @@ Your application must let an organizer either upload a hidden-test CSV or paste 
 
 Reference: [ACR incidental thyroid nodule use case](https://www.acr.org/Data-Science-and-Informatics/AI-in-Your-Practice/AI-Use-Cases/Decreasing-Variability-Follow-Up-Recommendations-Incidental-Thyroid-Nodules) and [ACR Incidental Thyroid Findings Committee white paper](https://www.acr.org/-/media/ACR/NOINDEX/RSCAN/Incidental-Thyroid-Nodule-Follow-up.pdf).
 
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
+
 ## Success
 
 A resident should be able to see what the tool extracted, understand the evidence in the report, supply missing context, and accept, edit, or defer the drafted recommendation.

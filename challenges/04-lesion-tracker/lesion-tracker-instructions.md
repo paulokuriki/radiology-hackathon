@@ -58,6 +58,10 @@ The test data will follow the same structure and general patterns as the provide
 
 Your application must let an organizer upload a new patient-history CSV with `study_date` and `report_text` columns. Validate the input columns. Do not rely on a patient filename, known study dates, a fixed number of studies, or a preloaded patient history.
 
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
+
 ## Success
 
 A radiologist should be able to load a patient history into your application and understand the evolution of the important findings more easily than by reading all of the reports manually.

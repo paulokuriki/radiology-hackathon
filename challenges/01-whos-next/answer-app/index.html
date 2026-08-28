@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who's Next Worklist Prioritizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="top-bar" aria-label="Worklist controls">
+      <div>
+        <p class="eyebrow">Challenge 01</p>
+        <h1>Who's Next</h1>
+      </div>
+      <div class="file-tools">
+        <label class="file-button">
+          <span>Upload CSV</span>
+          <input id="csvInput" type="file" accept=".csv,text/csv">
+        </label>
+        <button id="loadWorklist" type="button">Load provided</button>
+        <button id="loadPractice" type="button">Load practice</button>
+        <button id="exportCsv" type="button" disabled>Export results</button>
+      </div>
+    </section>
+
+    <section id="status" class="status empty" role="status">
+      Upload a worklist CSV with the eight documented columns.
+    </section>
+
+    <section class="dashboard" aria-label="Worklist summary">
+      <article class="metric urgent">
+        <span id="readNowCount">0</span>
+        <p>Read now</p>
+      </article>
+      <article class="metric">
+        <span id="caseCount">0</span>
+        <p>Total studies</p>
+      </article>
+      <article class="metric">
+        <span id="oldestWait">0m</span>
+        <p>Longest wait</p>
+      </article>
+      <article class="metric">
+        <span id="reviewCount">0</span>
+        <p>Need cue review</p>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <aside class="policy-panel" aria-label="Visible prioritization policy">
+        <div class="panel-heading">
+          <h2>Policy</h2>
+          <button id="resetPolicy" type="button">Reset</button>
+        </div>
+
+        <fieldset>
+          <legend>Order priority points</legend>
+          <label>STAT <input id="weightStat" type="number" value="55" min="0" max="100"></label>
+          <label>Urgent <input id="weightUrgent" type="number" value="32" min="0" max="100"></label>
+          <label>Routine <input id="weightRoutine" type="number" value="6" min="0" max="100"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Location points</legend>
+          <label>ED <input id="weightEd" type="number" value="24" min="0" max="100"></label>
+          <label>ICU <input id="weightIcu" type="number" value="22" min="0" max="100"></label>
+          <label>Inpatient <input id="weightInpatient" type="number" value="12" min="0" max="100"></label>
+          <label>Outpatient <input id="weightOutpatient" type="number" value="2" min="0" max="100"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Waiting time</legend>
+          <label>Points per hour <input id="waitPerHour" type="number" value="8" min="0" max="50"></label>
+          <label>Wait cap <input id="waitCap" type="number" value="48" min="0" max="120"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Clinical indication</legend>
+          <label>Urgency phrase bonus <input id="phraseBonus" type="number" value="16" min="0" max="50"></label>
+          <label>Missing indication cue <input id="missingBonus" type="number" value="8" min="0" max="40"></label>
+        </fieldset>
+
+        <div class="policy-actions">
+          <button id="applyPolicy" type="button" disabled>Apply policy order</button>
+          <button id="clearFilters" type="button" disabled>Clear filters</button>
+        </div>
+      </aside>
+
+      <section class="worklist-panel" aria-label="Prioritized worklist">
+        <div class="table-toolbar">
+          <div class="search-wrap">
+            <label for="searchBox">Search</label>
+            <input id="searchBox" type="search" placeholder="Study, location, exam, indication" disabled>
+          </div>
+          <div class="filter-wrap">
+            <label for="tierFilter">Tier</label>
+            <select id="tierFilter" disabled>
+              <option value="all">All tiers</option>
+              <option value="Read now">Read now</option>
+              <option value="Next wave">Next wave</option>
+              <option value="Keep visible">Keep visible</option>
+              <option value="Can wait">Can wait</option>
+            </select>
+          </div>
+          <div class="filter-wrap">
+            <label for="locationFilter">Location</label>
+            <select id="locationFilter" disabled>
+              <option value="all">All locations</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-frame">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Seq</th>
+                <th scope="col">Study</th>
+                <th scope="col">Tier</th>
+                <th scope="col">Score</th>
+                <th scope="col">Wait</th>
+                <th scope="col">Reasoning</th>
+                <th scope="col">Move</th>
+              </tr>
+            </thead>
+            <tbody id="worklistBody">
+              <tr class="placeholder-row">
+                <td colspan="7">No worklist loaded yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

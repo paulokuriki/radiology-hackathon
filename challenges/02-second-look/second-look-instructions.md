@@ -45,10 +45,6 @@ Some reports contain statements that merit review. Others are complex but intern
 
 Use the provided reports to understand the kinds of language and relationships your tool needs to handle and to build the first version of the product.
 
-### Optional: LLM API
-
-You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
-
 ### Hidden Test
 
 During the final demonstration, your application will receive reports that your team has not seen before. The hidden-test data will follow the same schema and general patterns as the provided data.
@@ -64,6 +60,10 @@ A radiologist should be able to open a report, quickly understand what deserves 
 Strong solutions make their reasoning visible. They may use rules, keyword matching, section comparison, measurement checks, an AI model, or another approach entirely. The product should support the radiologist's judgment rather than claim to determine whether a report is correct.
 
 Focus on the **smallest useful version** you can build.
+
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
 
 ## Final Demo
 

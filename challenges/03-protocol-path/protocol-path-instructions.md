@@ -2,7 +2,7 @@
 
 ## The Problem
 
-An MRI brain order may not clearly identify the local protocol that should be followed. The useful signal is often in the clinical reason: acute focal deficit, tumor surveillance, seizure localization, cognitive decline, or another focused question.
+An MRI brain order may not clearly identify the best protocol that should be followed. One of the most useful signals is often in the clinical reason: acute focal deficit, tumor surveillance, seizure localization, cognitive decline, or another focused question.
 
 ## Your Challenge
 
@@ -34,7 +34,7 @@ A static HTML, CSS, and JavaScript page is sufficient. Build a small phrase bank
 
 Every order has `study_description` equal to `MRI Brain`. The clinical reason distinguishes the protocol.
 
-`data/protocols.csv` contains the local protocol catalog:
+`data/protocols.csv` contains the protocols catalog:
 
 - `protocol_name` — the exact protocol name that the tool should recommend or follow
 - `clinical_description` — editable local context describing when that protocol applies
@@ -71,6 +71,10 @@ Your application must let an organizer upload a new hidden-test CSV. Do not requ
 A user should be able to load unfamiliar MRI brain requests, see the local protocol recommended for each, understand why, and override it when needed.
 
 Focus on the **smallest useful version** you can build.
+
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
 
 ## Final Demo
 

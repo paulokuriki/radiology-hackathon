@@ -68,6 +68,10 @@ A strong solution treats its prioritization as transparent decision support, not
 
 Focus on the **smallest useful version** you can build.
 
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
+
 ## Final Demo
 
 Show us:

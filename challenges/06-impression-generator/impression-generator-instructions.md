@@ -51,6 +51,10 @@ Explain one thing that worked, failed, or surprised you.
 
 Consider improvements such as saved prompt versions, source-evidence highlighting, or a summary across all reports.
 
+### Optional: LLM API
+
+You can use OpenRouter as an LLM provider. Enter the API key in the application, then call the authenticated `GET https://openrouter.ai/api/v1/models/user` route to find available models. Choose a model `id` from its response; do not assume a model in the global `/models` list is available.
+
 ## Success
 
 A successful prototype lets a radiologist test a prompt on a report collection, compare drafts with provided examples, improve the prompt, and apply the same workflow to new data.

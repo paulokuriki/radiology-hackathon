@@ -2,6 +2,11 @@
 .DS_Store
 Thumbs.db
 .vscode/
+api-key.txt
 
 # Organizer-only final demonstration data
 hidden-test/
+
+# Internal Data
+photos-radiology-hackathon/
+Hackathon Presentation.pptx
